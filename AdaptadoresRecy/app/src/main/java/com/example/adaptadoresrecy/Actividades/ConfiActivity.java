@@ -41,6 +41,7 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
         int layoutContenedor = R.layout.contenedor_configuracion;
         int layoutsubContenedor = R.layout.contenedor_configuracion;
 
+
         if (getIntent().hasExtra("menu")) {
             menu = getIntent().getStringExtra("menu");
         }
@@ -66,7 +67,7 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
                     layoutsubContenedor = R.layout.contenedor_configuracion3;
                     layoutBase = R.layout.activity_configuracion_02;
                 case "3":
-                    layoutManagerRcybase = new LayoutManagerRcy(this,1);
+                    layoutManagerRcybase = new LayoutManagerRcy(this, 1);
                     layoutManagerRcyCard = new LayoutManagerRcy(this);
                     layoutManagerRcySubCard = new LayoutManagerRcy(this);
                     break;
@@ -84,17 +85,16 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
                 case "1":
                 case "2":
                 case "3":
-
                 case "f":
                     AdaptadorRcyWidget item = new AdaptadorRcyWidget(R.layout.itemw_configuracion);
                     AdaptadorRcyContenedor item_contenedor = new AdaptadorRcyContenedor(layoutsubContenedor, item);
                     item_contenedor.setLayoutManager(layoutManagerRcySubCard);
-                    adapter = new AdaptadorRcyContenedor(list, this, layoutContenedor, item_contenedor);
+                    adapter = new AdaptadorRcyContenedor(this, layoutContenedor, list, item_contenedor);
 
                     break;
                 default:
                     AdapterRecyItem adaptadorRcyWidget = new AdaptadorRcyWidget(R.layout.itemw_configuracion);
-                    adapter = new AdaptadorRcyContenedor(list, this, R.layout.contenedor_configuracion, adaptadorRcyWidget);
+                    adapter = new AdaptadorRcyContenedor(this, R.layout.contenedor_configuracion, list, adaptadorRcyWidget);
 
 
                     break;
@@ -129,12 +129,12 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
                 for (int i = 0; i < 3; i++) {
 
 
-                    ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                    ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                     ediText.setHint("256");
                     ediText.setDiseño(0);
                     items.add(ediText);
 
-                    aSwitch = new SwitchWidgetModel("Titulo Widget", 0, this);
+                    aSwitch = new SwitchWidgetModel("Titulo Widget", false, this);
                     aSwitch.setChecked("0");
                     aSwitch.setDiseño(0);
                     items.add(aSwitch);
@@ -147,15 +147,15 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
                 itemsContenedores = new ArrayList<>();
 
 
-                aSwitch = new SwitchWidgetModel("Titulo Widget", 0, this);
+                aSwitch = new SwitchWidgetModel("Titulo Widget", false, this);
                 aSwitch.setChecked("0");
                 aSwitch.setDiseño(0);
                 items.add(aSwitch);
-                aSwitch = new SwitchWidgetModel("Titulo Widget", 0, this);
+                aSwitch = new SwitchWidgetModel("Titulo Widget", true, this);
                 aSwitch.setChecked("0");
                 aSwitch.setDiseño(0);
                 items.add(aSwitch);
-                aSwitch = new SwitchWidgetModel("Titulo Widget", 0, this);
+                aSwitch = new SwitchWidgetModel("Titulo Widget", false, this);
                 aSwitch.setChecked("0");
                 aSwitch.setDiseño(0);
                 items.add(aSwitch);
@@ -165,13 +165,13 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
                 result.add(new ContenedorRcyModel("Titulo n2", itemsContenedores));
                 itemsContenedores = new ArrayList<>();
 
-                ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                 ediText.setDiseño(0);
                 items.add(ediText);
-                ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                 ediText.setDiseño(0);
                 items.add(ediText);
-                ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                 ediText.setDiseño(0);
                 items.add(ediText);
 
@@ -179,13 +179,13 @@ public class ConfiActivity extends AppCompatActivity implements View.OnClickList
                 items = new ArrayList<>();
 
 
-                ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                 ediText.setDiseño(0);
                 items.add(ediText);
-                ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                 ediText.setDiseño(0);
                 items.add(ediText);
-                ediText = new EdiTextWidgetModel("Titulo Widget", 0, 0, InputType.TYPE_CLASS_NUMBER, true, this);
+                ediText = new EdiTextWidgetModel("Titulo Widget", 0, InputType.TYPE_CLASS_NUMBER, true, this);
                 ediText.setDiseño(0);
                 items.add(ediText);
 

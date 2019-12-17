@@ -13,15 +13,15 @@ public class SwitchWidgetModel extends WidgetModel implements ItemWidget {
     private Context ctx;
 
 
-    public SwitchWidgetModel(String titulo, int tipoWiget, boolean isCheck, Context context) {
-        super(titulo, tipoWiget, context);
+    public SwitchWidgetModel(String titulo, boolean isCheck, Context context) {
+        super(titulo, context);
         this.ctx = context;
         aSwitch = new Switch(context);
         aSwitch.setChecked(isCheck);
     }
 
-    public SwitchWidgetModel(String titulo, int tipo, Context context) {
-        super(titulo, tipo, context);
+    public SwitchWidgetModel(String titulo, Context context) {
+        super(titulo, context);
         aSwitch = new Switch(context);
     }
 
