@@ -16,8 +16,8 @@ public class EdiTextWidgetModel extends WidgetModel implements ItemWidget {
     Context ctx;
     private boolean enable;
 
-    public EdiTextWidgetModel(String titulo, int tipoWiget, int lengMax, int Type_input, Boolean enabled, Context context) {
-        super(titulo, tipoWiget, context);
+    public EdiTextWidgetModel(String titulo,  int lengMax, int Type_input, Boolean enabled, Context context) {
+        super(titulo,  context);
         this.ctx = context;
         this.enable = enabled;
         editText = new EditText(context);
