@@ -9,14 +9,14 @@ public class BtnWidgetModel extends WidgetModel implements ItemWidget {
 
     private Button button;
 
-    public BtnWidgetModel(String titulo, int tipo, Context context) {
-        super("", tipo, context);
+    public BtnWidgetModel(String titulo, Context context) {
+        super("",  context);
         button = new Button(context);
         button.setText(titulo);
     }
 
-    public BtnWidgetModel(String titulo, int tipo, final Context context, final Class clase) {
-        super("", tipo, context);
+    public BtnWidgetModel(String titulo,  final Context context, final Class clase) {
+        super("",  context);
         button = new Button(context);
         button.setText(titulo);
         button.setOnClickListener(new View.OnClickListener() {
@@ -28,8 +28,8 @@ public class BtnWidgetModel extends WidgetModel implements ItemWidget {
 
     }
 
-    public BtnWidgetModel(String titulo, int tipo, final Context context, final Class clase, final String menu) {
-        super("", tipo, context);
+    public BtnWidgetModel(String titulo,  final Context context, final Class clase, final String menu) {
+        super("",  context);
         button = new Button(context);
         button.setText(titulo);
         button.setOnClickListener(new View.OnClickListener() {

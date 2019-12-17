@@ -35,7 +35,6 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-        getActionBar().setIcon(R.drawable.ic_guardar);
 
         if (getIntent().hasExtra("menu")) {
             menu = getIntent().getStringExtra("menu");
@@ -58,8 +57,8 @@ public class InfoActivity extends AppCompatActivity {
         }
         RecyclerView recyclerView = findViewById(R.id.rcy);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        AdaptadorRcy2String adaptadorRcyDosString = new AdaptadorRcy2String(layout, this);
-        recyclerView.setAdapter(new AdaptadorRcyContenedor(getItems(menu), InfoActivity.this, R.layout.item_info, adaptadorRcyDosString));
+        AdaptadorRcy2String adaptadorRcyDosString = new AdaptadorRcy2String(this, layout);
+        recyclerView.setAdapter(new AdaptadorRcyContenedor(InfoActivity.this, R.layout.item_info, getItems(menu), adaptadorRcyDosString));
 
 
     }

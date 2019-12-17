@@ -4,8 +4,8 @@
 
     <item
         android:id="@+id/action_save"
-        android:icon="@drawable/abc_vector_test"
-        android:title="@string/app_name"
-        app:showAsAction="always" />
+        android:icon="@drawable/ic_guardar"
+        app:showAsAction="always"
+        android:title="Guardar" />
 
 </menu>

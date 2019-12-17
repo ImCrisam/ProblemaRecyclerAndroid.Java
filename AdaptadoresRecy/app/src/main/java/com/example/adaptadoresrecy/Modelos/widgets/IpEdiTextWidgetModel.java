@@ -6,8 +6,8 @@ import android.view.View;
 public class IpEdiTextWidgetModel extends WidgetModel implements ItemWidget {
 
 //    IPEditText ipEditText;
-    public IpEdiTextWidgetModel(String titulo, int tipo, Context context) {
-        super(titulo, tipo, context);
+    public IpEdiTextWidgetModel(String titulo,  Context context) {
+        super(titulo, context);
 //        ipEditText = new IPEditText(context, null);
 //        ipEditText.setBackground(R.drawable.fondo_editext, context);
     }
